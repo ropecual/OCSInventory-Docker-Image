@@ -94,7 +94,6 @@ RUN chmod +x /root/run.sh ;\
     ln -s /etc/apache2/conf-available/ocsinventory-reports.conf /etc/apache2/conf-enabled/ocsinventory-reports.conf ;\
     ln -s /etc/apache2/conf-available/z-ocsinventory-server.conf /etc/apache2/conf-enabled/z-ocsinventory-server.conf ;\
     rm /usr/share/ocsinventory-reports/ocsreports/install.php ;\
-    rm -rf /tmp/ocs ;\
     apt-get clean ;\
     apt-get autoclean ;\
     apt-get autoremove ;\
