@@ -82,7 +82,16 @@ RUN cp -R ocsreports/* /usr/share/ocsinventory-reports/ocsreports ;\
     chmod +w /usr/share/ocsinventory-reports/ocsreports/dbconfig.inc.php ;\
     mkdir -p /var/log/ocsinventory-server/ ;\
     chmod +w /var/log/ocsinventory-server ;\
-    chown -R www-data: /usr/share/ocsinventory-reports/
+    chown -R www-data: /usr/share/ocsinventory-reports/ ;\
+    echo "<?php" > /tmp/ocs/ocsreports/dbconfig.inc.php ;\
+    echo "define('DB_NAME','$OCS_DBNAME')" >> /tmp/ocs/ocsreports/dbconfig.inc.php ;\
+    echo "define('SERVER_READ','$OCS_DBSERVER_READ')"  >> /tmp/ocs/ocsreports/dbconfig.inc.php ;\
+    echo "define('SERVER_WRITE','$OCS_DBSERVER_WRITE')" >> /tmp/ocs/ocsreports/dbconfig.inc.php ;\
+    echo "define('COMPTE_BASE','$OCS_DBUSER')"  >> /tmp/ocs/ocsreports/dbconfig.inc.php ;\
+    echo "define('PSWD_BASE','$OCS_DBPASS')" >> /tmp/ocs/ocsreports/dbconfig.inc.php ;\
+    echo "?>" >> /tmp/ocs/ocsreports/dbconfig.inc.php
+
+COPY dbconfig.inc.php /usr/share/ocsinventory-reports/ocsreports/dbconfig.inc.php
 
 COPY /conf/ocsinventory-reports.conf /conf/z-ocsinventory-server.conf /etc/apache2/conf-available/
 COPY ./scripts/run.sh /root/run.sh
