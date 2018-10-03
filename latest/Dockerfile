@@ -11,35 +11,31 @@ VOLUME /var/lib/mysql
 RUN apt-get update ; \
     apt-get ${APT_FLAGS} install \
     apache2 \
-    apache2-doc \
-    apt-utils \
-    php5 \
-    php5-gd \
-    php5-mysql \
-    php5-cgi \
-    php5-curl \
-    perl \
-    build-essential \
-    libapache2-mod-php5 \
-    libxml2 \
+    mariadb-client \
     libxml-simple-perl \
-    libc6-dev \
-    libnet-ip-perl \
-    libxml-libxml-perl \
-    libapache2-mod-perl2 \
-    libdbi-perl \
-    libapache-dbi-perl \
-    libdbd-mysql-perl \
-    libio-compress-perl \
-    libxml-simple-perl \
-    libsoap-lite-perl \
-    libarchive-zip-perl \
-    libnet-ip-perl \
-    libphp-pclzip \
-    libsoap-lite-perl \
-    libarchive-zip-perl \
-    libmodule-build-perl \
     libperl5.24 \
+    libdbi-perl \
+    libdbd-mysql-perl \
+    libapache-dbi-perl \
+    libnet-ip-perl \
+    libsoap-lite-perl \
+    libarchive-zip-perl \
+    make \
+    build-essential \
+    php-pclzip \
+    make \
+    build-essential \
+    libdbd-mysql-perl \
+    libnet-ip-perl \
+    libxml-simple-perl \
+    php-gd \
+    php \
+    php-mbstring \
+    php-soap \
+    php-mysql \ 
+    php-curl \ 
+    php-xml \ 
+    php-zip \
     wget \
     tar \
     make ;\
