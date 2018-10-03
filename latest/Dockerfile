@@ -70,7 +70,7 @@ ENV APACHE_LOG_DIR      /var/log/apache2
 
 WORKDIR /tmp/ocs
 
-COPY dbconfig.inc.php /usr/share/ocsinventory-reports/ocsreports/
+COPY dbconfig.inc.php /usr/share/ocsinventory-reports/ocsreports/dbconfig.inc.php
 
 RUN cp -R ocsreports/* /usr/share/ocsinventory-reports/ocsreports ;\
     bash -c 'mkdir -p /var/lib/ocsinventory-reports/{download,ipd,logs,scripts,snmp}' ;\
