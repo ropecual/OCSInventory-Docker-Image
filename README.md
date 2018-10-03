@@ -35,7 +35,7 @@ OCS Inventory NG includes the packet deployment functionality to be sure that al
 Starting a **OCSInventory container** is simple:
 Clone this repository :
 
-> sudo git clone https://github.com/OCSInventory-NG/OCSInventory-Docker-Image.git
+> sudo git clone https://github.com/ropecual/OCSInventory-Docker-Image.git
 > cd OCSInventory-Docker-Image
 
 
