@@ -1,4 +1,4 @@
-FROM debian:jessie-slim
+FROM debian:stretch-slim
 
 LABEL maintainer="coord.redes@campinas.sp.leg.br"
 LABEL version="2.5"
@@ -39,6 +39,7 @@ RUN apt-get update ; \
     libsoap-lite-perl \
     libarchive-zip-perl \
     libmodule-build-perl \
+    libperl5.24 \
     wget \
     tar \
     make ;\
